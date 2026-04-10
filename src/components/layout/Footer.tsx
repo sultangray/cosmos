@@ -105,7 +105,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📍 147 Bashewa Road, Bashewa, Bapsfontein</li>
+              <li>📍 Plot 147 M30 Road, Bashewa AH, Garsfontein, 0056</li>
               <li>📞 012 811 1514</li>
               <li>✉️ info@cosmobedsfactory.co.za</li>
             </ul>

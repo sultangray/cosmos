@@ -33,18 +33,43 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
 
-    toast.success('Message sent successfully! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: '',
-    });
-    setIsSubmitting(false);
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success('Message sent successfully! We will get back to you soon.');
+        // Clear the form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        toast.error(result.message || 'Something went wrong submitting the form.');
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -89,9 +114,9 @@ const Contact = () => {
                     <div>
                       <h4 className="font-bold text-foreground text-lg mb-1">Factory Address</h4>
                       <p className="text-muted-foreground leading-relaxed">
-                        147 Bashewa Road<br />
-                        Bashewa, Bapsfontein<br />
-                        Gauteng, South Africa
+                        Plot 147 M30 Road<br />
+                        Bashewa AH, Garsfontein<br />
+                        0056
                       </p>
                     </div>
                   </div>
