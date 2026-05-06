@@ -2,49 +2,50 @@ import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Lerato M.",
-    role: "Verified Buyer",
-    content: "The best sleep I've had in years. The quality of the Cosmo Luxury Suite is comparable to international brands but at a much better price.",
+    name: "Sarah M.",
+    role: "Boutique Hotel Manager",
+    content: "Since switching to Cosmo Beds, our guest sleep scores have skyrocketed. The durability of their commercial range is outstanding, and buying direct saved us thousands on our refit.",
     rating: 5
   },
   {
-    name: "Sipho D.",
-    role: "Verified Buyer",
-    content: "Excellent service from start to finish. Being a local factory, they really care about their customers. Highly recommended!",
+    name: "David L.",
+    role: "Airbnb Superhost Portfolio",
+    content: "I furnish all 12 of my Airbnb properties with Cosmo Beds. They hold up incredibly well to constant guest turnover, and the wholesale pricing allows me to offer luxury comfort on a strict budget.",
     rating: 5
   },
   {
-    name: "Thabo K.",
-    role: "Verified Buyer",
-    content: "Supporting a 100% Black-owned business that actually delivers premium quality feels great. The delivery was on time too.",
+    name: "Grace T.",
+    role: "Lodge Procurement Officer",
+    content: "A fantastic 100% Black-owned partner. Their bulk logistics were flawless, delivering and installing 50 units across our resort seamlessly. The build quality is phenomenal.",
     rating: 5
   }
 ];
 
 const Testimonials = () => {
   return (
-    <section className="py-16 bg-accent/50">
+    <section className="py-20 bg-accent/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">What Our Customers Say</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Join thousands of happy South Africans sleeping better on Cosmo Beds.
+        <div className="text-center mb-16">
+          <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Industry Trusted</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Trusted by Hospitality Leaders</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Don't just take our word for it. See why property managers and hotel owners across Gauteng rely on Cosmo Beds for their guests.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
-            <div key={index} className="bg-background p-8 rounded-2xl border border-border shadow-sm relative">
-              <Quote className="h-8 w-8 text-primary/20 absolute top-6 right-6" />
-              <div className="flex mb-4">
+            <div key={index} className="bg-background p-8 rounded-2xl border border-border shadow-md hover:shadow-lg transition-shadow relative group">
+              <Quote className="h-10 w-10 text-primary/10 absolute top-6 right-6 group-hover:text-primary/20 transition-colors" />
+              <div className="flex mb-6">
                 {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground mb-6 italic">"{t.content}"</p>
-              <div>
-                <p className="font-bold text-foreground">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
+              <p className="text-foreground mb-8 text-lg leading-relaxed">"{t.content}"</p>
+              <div className="border-t border-border pt-4 mt-auto">
+                <p className="font-bold text-foreground text-lg">{t.name}</p>
+                <p className="text-sm font-medium text-primary">{t.role}</p>
               </div>
             </div>
           ))}

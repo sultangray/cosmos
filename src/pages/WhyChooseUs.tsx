@@ -1,26 +1,27 @@
-import { Truck, ShieldCheck, MapPin, BadgeCheck } from 'lucide-react';
-import whyChooseUsImage from '@/assets/whyus.jpg';
+import { Truck, ShieldCheck, BadgeCheck, Landmark } from 'lucide-react';
+// Using your factory photo showing stacked mattresses ready for bulk delivery
+import whyChooseUsImage from '@/assets/IMG_0021.jpeg';
 
 const features = [
   {
     icon: <ShieldCheck className="h-8 w-8 text-primary" />,
-    title: "Factory Warranty",
-    description: "Every bed comes with a comprehensive factory warranty for your peace of mind."
+    title: "Commercial Warranty",
+    description: "Our hospitality range is backed by comprehensive warranties designed for high-turnover environments."
   },
   {
-    icon: <Truck className="h-8 w-8 text-primary" />,
-    title: "Fast Delivery",
-    description: "We deliver across Gauteng and surrounding areas directly from our factory floor."
-  },
-  {
-    icon: <MapPin className="h-8 w-8 text-primary" />,
-    title: "Proudly Local",
-    description: "100% South African manufactured, supporting local jobs and our community."
+    icon: <Landmark className="h-8 w-8 text-primary" />,
+    title: "Factory-Direct ROI",
+    description: "Eliminate retail markups. Secure wholesale pricing directly from our Bapsfontein manufacturing hub."
   },
   {
     icon: <BadgeCheck className="h-8 w-8 text-primary" />,
-    title: "Premium Materials",
-    description: "We use high-density foam and tempered steel springs for maximum durability."
+    title: "Hotel-Grade Durability",
+    description: "Reinforced wooden bases and high-density, anti-sag foams engineered for continuous daily use."
+  },
+  {
+    icon: <Truck className="h-8 w-8 text-primary" />,
+    title: "Bulk Logistics",
+    description: "Seamless multi-room delivery and installation services across Gauteng for hotels and lodges."
   }
 ];
 
@@ -31,33 +32,33 @@ const WhyChooseUs = () => {
         <div className="bg-secondary rounded-3xl p-8 md:p-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Why Choose Cosmo Beds?</h2>
-              <p className="text-muted-foreground mb-8">
-                We cut out the middleman. By buying directly from our factory, you get premium 
-                sleep technology without the retail markup. Quality craftsmanship meets 
-                South African heart.
+              <h2 className="text-3xl font-bold text-foreground mb-6">Why Partner with Cosmo Beds?</h2>
+              <p className="text-muted-foreground mb-8 text-lg">
+                We supply the hospitality industry directly from our factory floor.
+                Upgrade your rooms with premium sleep technology while protecting your
+                bottom line through our direct B2B pricing model.
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 {features.map((f, i) => (
                   <div key={i} className="flex flex-col gap-3">
-                    <div className="bg-background w-12 h-12 rounded-lg flex items-center justify-center shadow-sm">
+                    <div className="bg-background w-12 h-12 rounded-lg flex items-center justify-center shadow-sm border border-border">
                       {f.icon}
                     </div>
-                    <h4 className="font-semibold text-foreground">{f.title}</h4>
-                    <p className="text-sm text-muted-foreground">{f.description}</p>
+                    <h4 className="font-bold text-foreground text-lg">{f.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{f.description}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative">
-              <img 
-                src={whyChooseUsImage} 
-                alt="Quality Bed Manufacturing" 
-                className="rounded-2xl shadow-xl object-cover h-[400px] w-full"
+              <img
+                src={whyChooseUsImage}
+                alt="Bulk commercial bed manufacturing"
+                className="rounded-2xl shadow-xl object-cover h-[500px] w-full border-4 border-background"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl hidden md:block">
-                <p className="text-2xl font-bold">10+ Years</p>
-                <p className="text-sm">Of Manufacturing Excellence</p>
+              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-2xl hidden md:block shadow-lg">
+                <p className="text-3xl font-black">B2B</p>
+                <p className="text-sm font-medium mt-1">Direct Manufacturing</p>
               </div>
             </div>
           </div>

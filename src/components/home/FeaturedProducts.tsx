@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { getFeaturedProducts } from '@/data/products';
 import ProductCard from '@/components/products/ProductCard';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Building2 } from 'lucide-react';
 
 const FeaturedProducts = () => {
   const featuredProducts = getFeaturedProducts().slice(0, 4);
@@ -12,16 +12,19 @@ const FeaturedProducts = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              Featured Products
-            </h2>
-            <p className="text-muted-foreground">
-              Our most popular beds loved by South African families
+            <div className="flex items-center gap-3 mb-2">
+              <Building2 className="h-8 w-8 text-primary" />
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Featured Commercial Range
+              </h2>
+            </div>
+            <p className="text-muted-foreground text-lg">
+              Our most durable, high-performance beds trusted by hotels and Airbnbs.
             </p>
           </div>
           <Link to="/shop">
-            <Button variant="outline">
-              View All Products
+            <Button variant="outline" size="lg" className="rounded-full">
+              View Full Catalogue
               <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
           </Link>

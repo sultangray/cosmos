@@ -1,17 +1,21 @@
 import { categories } from '@/data/products';
 import CategoryCard from '@/components/products/CategoryCard';
+import { ShieldCheck } from 'lucide-react';
 
 const CategorySection = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
+          <div className="flex justify-center mb-4">
+            <ShieldCheck className="h-12 w-12 text-primary" />
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Shop by Category
+            Hospitality & B2B Categories
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Browse our carefully curated selection of beds, mattresses, and base sets 
-            designed for ultimate comfort and lasting quality.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            Browse our specialized selection of heavy-duty beds, durable mattresses,
+            and reinforced base sets engineered for high-turnover environments.
           </p>
         </div>
 

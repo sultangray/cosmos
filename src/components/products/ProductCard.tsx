@@ -10,12 +10,12 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-white p-6 flex items-center justify-center">
+      {/* Image - Removed padding, changed to object-cover */}
+      <div className="relative aspect-[4/3] overflow-hidden bg-white">
         <img
           src={product.images[0]}
           alt={product.name}
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-md"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         {product.newArrival && (
           <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold tracking-wide shadow-sm z-10">

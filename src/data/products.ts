@@ -38,45 +38,78 @@ export interface Category {
   image: string;
 }
 
-// Import all product images
-import imgStazaSupreme from '@/assets/F3BB2645-9351-4DA7-8425-AB74A699D406.jpeg';
-import imgRoyalPocket from '@/assets/754AEB63-A68F-493A-B3A0-3D2AB3999E06.jpeg';
-import imgCosmosSupreme from '@/assets/789C8823-43CA-4CA9-9708-7083B8AAABD7.jpeg';
-import imgHercules from '@/assets/AFDD38B3-F25C-440A-8671-26F317B4FC59.jpeg';
-import imgSuperDream from '@/assets/B1425A9A-AF1C-4DDA-BEFB-0812C9493DF9.jpeg';
-import imgWhiteBase from '@/assets/DF7FC2B7-22C9-4FC2-A702-F10B61C13FB1.jpeg';
-import imgDreamweaver from '@/assets/687F2ABD-7957-4B62-9573-2F3582CA7A30.jpeg';
-import imgBrownBaseSq from '@/assets/F847A5E9-D152-4A73-90B3-856E18C766E4.png';
-import imgBrownBaseLg from '@/assets/199DAF13-E7E6-4178-9860-A24F558C9406.png';
+// --- OPTIMIZED HIGH-RESOLUTION IMAGE IMPORTS ---
+
+// Hercules Range 
+import imgHercSet from '@/assets/AFDD38B3-F25C-440A-8671-26F317B4FC59.jpeg';
+import imgHercMat from '@/assets/6F2E94D0-B802-44EF-85EB-5DAC13BD6915.jpeg';
+import imgHercBase from '@/assets/F2462429-9085-4DFB-B3C0-A1BC3F1F0C55.jpeg';
+
+// Super Dreamweaver Range 
+import imgSuperSet from '@/assets/9E094BE1-E96E-4C5B-8E49-0BF9E5AD8B12.jpeg';
+import imgSuperMat from '@/assets/CAFF81C4-6CCA-4BAA-88FC-AC4D72E81604.jpeg';
+import imgSuperBase from '@/assets/458ACD35-6126-4FAC-9152-1E5DC4FF686D.jpeg';
+
+// Dreamweaver Range 
+import imgDreamSet from '@/assets/D0693500-0AA9-401C-9636-5A87D90889DA.jpeg';
+import imgDreamMat from '@/assets/20EDE279-2573-44D8-8247-46BA47E49939.jpeg';
+import imgDreamBase from '@/assets/47E3767F-B2ED-41C9-B622-CB76D2CA06A4.jpeg';
+
+// Cosmos Supreme Range 
+import imgCosmosSet from '@/assets/789C8823-43CA-4CA9-9708-7083B8AAABD7.jpeg';
+import imgCosmosMat from '@/assets/20037FF8-61BE-409F-9F37-E343BBB3478E.jpeg';
+import imgCosmosBase from '@/assets/199DAF13-E7E6-4178-9860-A24F558C9406.png';
+
+// Staza Supreme Range 
+import imgStazaSupSet from '@/assets/DF7FC2B7-22C9-4FC2-A702-F10B61C13FB1.jpeg';
+import imgStazaSupMat from '@/assets/7D50D564-7876-4802-B39F-8D57EBAC54B4.jpeg';
+import imgStazaSupBase from '@/assets/A1781E3F-F1F9-4152-BDE9-3AA50BDD5497.jpeg';
+
+// Royal Pocket Spring Range 
+import imgRoyalSet from '@/assets/C977BA17-5D91-41EE-B2CC-ADA38395D99D.jpeg';
+import imgRoyalMat from '@/assets/2F28ABF5-DED7-436B-ACF7-703848CBC0E8.jpeg';
+import imgRoyalBase from '@/assets/179E29F4-3540-45CA-92CE-6168F5D71B45.jpeg';
+
+// Staza Dreamer No Turn Range
+import imgStazaDreamNoTurnSet from '@/assets/754AEB63-A68F-493A-B3A0-3D2AB3999E06.jpeg';
+import imgStazaDreamNoTurnMat from '@/assets/3F1B4550-F025-4EC7-B7A0-03B3C363B4B0.jpeg';
+
+// Staza Dreamer Turn Range
+import imgStazaDreamTurnSet from '@/assets/687F2ABD-7957-4B62-9573-2F3582CA7A30.jpeg';
+import imgStazaDreamTurnMat from '@/assets/B1425A9A-AF1C-4DDA-BEFB-0812C9493DF9.jpeg';
+
+// Shared Staza Dreamer Base
+import imgStazaDreamBase from '@/assets/39EA61A9-C386-475E-873A-E5BB4456646E.jpeg';
+
 
 export const categories: Category[] = [
   {
     id: "1",
     name: "Beds",
     slug: "beds",
-    description: "Complete bed frames and headboards",
-    image: imgStazaSupreme,
+    description: "Complete commercial bed setups",
+    image: imgRoyalSet,
   },
   {
     id: "2",
     name: "Base Sets",
     slug: "base-sets",
-    description: "Complete base and mattress combinations",
-    image: imgRoyalPocket,
+    description: "Heavy-duty base and mattress sets",
+    image: imgDreamSet,
   },
   {
     id: "3",
     name: "Base Only",
     slug: "base-only",
-    description: "Quality bed bases sold separately",
-    image: imgBrownBaseSq,
+    description: "Reinforced hospitality bed bases",
+    image: imgHercBase,
   },
   {
     id: "4",
     name: "Mattress Only",
     slug: "mattress-only",
-    description: "Premium mattresses for ultimate comfort",
-    image: imgHercules,
+    description: "High-density turnable mattresses",
+    image: imgCosmosMat,
   },
 ];
 
@@ -98,7 +131,7 @@ export const products: Product[] = [
       { id: "herc-set-q", size: "Queen", price: 8620, inStock: true },
       { id: "herc-set-k", size: "King", price: 10900, inStock: true },
     ],
-    images: [imgHercules],
+    images: [imgHercSet],
     featured: true, newArrival: false, inStock: true,
   },
   {
@@ -117,7 +150,7 @@ export const products: Product[] = [
       { id: "herc-mat-q", size: "Queen", price: 6590, inStock: true },
       { id: "herc-mat-k", size: "King", price: 7700, inStock: true },
     ],
-    images: [imgHercules],
+    images: [imgHercMat],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -136,7 +169,7 @@ export const products: Product[] = [
       { id: "herc-base-q", size: "Queen", price: 2030, inStock: true },
       { id: "herc-base-k", size: "King", price: 3200, inStock: true },
     ],
-    images: [imgWhiteBase],
+    images: [imgHercBase],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -157,7 +190,7 @@ export const products: Product[] = [
       { id: "sdream-set-q", size: "Queen", price: 6930, inStock: true },
       { id: "sdream-set-k", size: "King", price: 8760, inStock: true },
     ],
-    images: [imgSuperDream],
+    images: [imgSuperSet],
     featured: true, newArrival: true, inStock: true,
   },
   {
@@ -176,7 +209,7 @@ export const products: Product[] = [
       { id: "sdream-mat-q", size: "Queen", price: 5330, inStock: true },
       { id: "sdream-mat-k", size: "King", price: 6300, inStock: true },
     ],
-    images: [imgSuperDream],
+    images: [imgSuperMat],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -195,7 +228,7 @@ export const products: Product[] = [
       { id: "sdream-base-q", size: "Queen", price: 1600, inStock: true },
       { id: "sdream-base-k", size: "King", price: 2460, inStock: true },
     ],
-    images: [imgBrownBaseSq],
+    images: [imgSuperBase],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -216,7 +249,7 @@ export const products: Product[] = [
       { id: "dream-set-q", size: "Queen", price: 6840, inStock: true },
       { id: "dream-set-k", size: "King", price: 8860, inStock: true },
     ],
-    images: [imgDreamweaver],
+    images: [imgDreamSet],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -235,7 +268,7 @@ export const products: Product[] = [
       { id: "dream-mat-q", size: "Queen", price: 5200, inStock: true },
       { id: "dream-mat-k", size: "King", price: 6200, inStock: true },
     ],
-    images: [imgDreamweaver],
+    images: [imgDreamMat],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -254,7 +287,7 @@ export const products: Product[] = [
       { id: "dream-base-q", size: "Queen", price: 1640, inStock: true },
       { id: "dream-base-k", size: "King", price: 2660, inStock: true },
     ],
-    images: [imgBrownBaseLg],
+    images: [imgDreamBase],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -275,7 +308,7 @@ export const products: Product[] = [
       { id: "cosmos-set-q", size: "Queen", price: 6770, inStock: true },
       { id: "cosmos-set-k", size: "King", price: 8510, inStock: true },
     ],
-    images: [imgCosmosSupreme],
+    images: [imgCosmosSet],
     featured: true, newArrival: false, inStock: true,
   },
   {
@@ -294,7 +327,7 @@ export const products: Product[] = [
       { id: "cosmos-mat-q", size: "Queen", price: 5360, inStock: true },
       { id: "cosmos-mat-k", size: "King", price: 6490, inStock: true },
     ],
-    images: [imgCosmosSupreme],
+    images: [imgCosmosMat],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -313,7 +346,7 @@ export const products: Product[] = [
       { id: "cosmos-base-q", size: "Queen", price: 1408, inStock: true },
       { id: "cosmos-base-k", size: "King", price: 1793, inStock: true },
     ],
-    images: [imgBrownBaseSq],
+    images: [imgCosmosBase],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -334,7 +367,7 @@ export const products: Product[] = [
       { id: "staza-sup-set-q", size: "Queen", price: 8070, inStock: true },
       { id: "staza-sup-set-k", size: "King", price: 10130, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaSupSet],
     featured: true, newArrival: true, inStock: true,
   },
   {
@@ -353,7 +386,7 @@ export const products: Product[] = [
       { id: "staza-sup-mat-q", size: "Queen", price: 6660, inStock: true },
       { id: "staza-sup-mat-k", size: "King", price: 8110, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaSupMat],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -372,7 +405,7 @@ export const products: Product[] = [
       { id: "staza-sup-base-q", size: "Queen", price: 1408, inStock: true },
       { id: "staza-sup-base-k", size: "King", price: 2014, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaSupBase],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -393,7 +426,7 @@ export const products: Product[] = [
       { id: "royal-set-q", size: "Queen", price: 11740, inStock: true },
       { id: "royal-set-k", size: "King", price: 14010, inStock: true },
     ],
-    images: [imgRoyalPocket],
+    images: [imgRoyalSet],
     featured: true, newArrival: true, inStock: true,
   },
   {
@@ -412,7 +445,7 @@ export const products: Product[] = [
       { id: "royal-mat-q", size: "Queen", price: 8720, inStock: true },
       { id: "royal-mat-k", size: "King", price: 9690, inStock: true },
     ],
-    images: [imgRoyalPocket],
+    images: [imgRoyalMat],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -431,7 +464,7 @@ export const products: Product[] = [
       { id: "royal-base-q", size: "Queen", price: 3020, inStock: true },
       { id: "royal-base-k", size: "King", price: 4320, inStock: true },
     ],
-    images: [imgRoyalPocket],
+    images: [imgRoyalBase],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -450,7 +483,7 @@ export const products: Product[] = [
       { id: "sd-noturn-set-34", size: "3/4", price: 2260, inStock: true },
       { id: "sd-noturn-set-d", size: "Double", price: 2670, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaDreamNoTurnSet],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -467,7 +500,7 @@ export const products: Product[] = [
       { id: "sd-noturn-mat-34", size: "3/4", price: 1390, inStock: true },
       { id: "sd-noturn-mat-d", size: "Double", price: 1690, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaDreamNoTurnMat],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -486,7 +519,7 @@ export const products: Product[] = [
       { id: "sd-turn-set-34", size: "3/4", price: 2530, inStock: true },
       { id: "sd-turn-set-d", size: "Double", price: 3100, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaDreamTurnSet],
     featured: false, newArrival: false, inStock: true,
   },
   {
@@ -503,7 +536,7 @@ export const products: Product[] = [
       { id: "sd-turn-mat-34", size: "3/4", price: 1670, inStock: true },
       { id: "sd-turn-mat-d", size: "Double", price: 2040, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaDreamTurnMat],
     featured: false, newArrival: false, inStock: true,
   },
 
@@ -522,7 +555,7 @@ export const products: Product[] = [
       { id: "sd-base-34", size: "3/4", price: 870, inStock: true },
       { id: "sd-base-d", size: "Double", price: 980, inStock: true },
     ],
-    images: [imgStazaSupreme],
+    images: [imgStazaDreamBase],
     featured: false, newArrival: false, inStock: true,
   }
 ];
